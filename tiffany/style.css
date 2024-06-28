@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-box {
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    background-color: lightcyan
+}
+
+.content-header {
+    height: 20vh;
+    background-color: black;
+}
+
+.logo {
+    height: 15vh;
+    background-color: white;
+}
+
+.nav, .footer {
+    height: 5vh;
+    background-color: rgb(129, 216, 208);
+}
+
+.content {
+    height: 40vh;;
+}
+
+.banner{
+    background-color:lightblue ;
+}
+
+.rings {
+    background-color: lightseagreen;
+}
+
+.classic {
+    background-color: lightpink;
+}
+
+.focus{
+background-color: lightsalmon;
+}
+
+.stroies {
+    background-color: lightgoldenrodyellow;
+}
+
+.contactus {
+    background-color: lightslategray;
+}
