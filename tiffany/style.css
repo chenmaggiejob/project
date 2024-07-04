@@ -4,12 +4,10 @@
 
 .container-box {
     width: 95%;
-    /* height: 100vh; */
+    height: 100vh;
     margin: auto;
     /* background-color: lightcyan */
 }
-
-
 
 .content-header {
     height: 20vh;
@@ -33,6 +31,15 @@
 
 .content {
     height: 40vh;;
+}
+
+.content-admin{
+
+    height: 70vh;;
+}
+
+.content-box {
+    height: 60vh;;
 }
 
 .banner{
