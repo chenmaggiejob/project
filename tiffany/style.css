@@ -4,23 +4,22 @@
 
 .container-box {
     width: 95%;
-    height: 100vh;
+    /* height: 500vh; */
     margin: auto;
     /* background-color: lightcyan */
 }
 
 .content-header {
-    height: 20vh;
-    background-color: black;
+    height: 15vh;
+    /* background-color: black; */
 }
 
 .logo {
-    height: 15vh;
-    background-color: white;
+    height: 10vh;
+    background-color:azure;
 }
 
-.navbox {
-    width: 100%;
+.nav {
     height: 5vh;
     background-color: rgb(129, 216, 208);
 }
@@ -31,20 +30,11 @@
 }
 
 .content {
-    height: 40vh;;
+    height: 40vh;
 }
 
-.content-admin{
-
-    height: 70vh;;
-}
-
-.content-box {
-    height: 60vh;;
-}
-
-.banner{
-    background-color:lightblue ;
+.banner {
+    background-color: lightblue;
 }
 
 .rings {
@@ -55,8 +45,8 @@
     background-color: lightpink;
 }
 
-.focus{
-background-color: lightsalmon;
+.focus {
+    background-color: lightsalmon;
 }
 
 .stroies {
@@ -67,28 +57,45 @@ background-color: lightsalmon;
     background-color: lightslategray;
 }
 
+/* backend css */
+.content-admin {
+    height: 80vh;
+    /* background-color: blueviolet; */
+}
+
+.backend-main {
+    width: 100%;
+    height: 80vh;
+    background-color: rgb(129, 216, 208);
+}
+
 /* 導航連結的基本樣式 */
 .navlink {
     position: relative;
     display: inline-block;
-    text-decoration: none; /* 移除預設底線 */
-    color: #000; /* 設定文字顏色 */
-    padding: 5px 0; /* 給連結一些內邊距 */
-  }
-  
-  /* 定義偽元素並設置底線的初始狀態 */
-  .navlink::after {
+    text-decoration: none;
+    /* 移除預設底線 */
+    color: #000;
+    /* 設定文字顏色 */
+    padding: 5px 0;
+    /* 給連結一些內邊距 */
+}
+
+/* 定義偽元素並設置底線的初始狀態 */
+.navlink::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color:  rgb(129, 216, 208); /* 底線顏色 */
-    transition: width 0.3s ease-in-out; /* 添加動畫效果 */
-  }
-  
-  /* 當滑鼠懸停時，擴展底線的寬度 */
-  .navlink:hover::after {
+    background-color: rgb(129, 216, 208);
+    /* 底線顏色 */
+    transition: width 0.3s ease-in-out;
+    /* 添加動畫效果 */
+}
+
+/* 當滑鼠懸停時，擴展底線的寬度 */
+.navlink:hover::after {
     width: 100%;
-  }
+}
