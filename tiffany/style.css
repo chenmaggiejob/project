@@ -16,7 +16,7 @@
 
 .logo {
     height: 10vh;
-    background-color:azure;
+    background-color: azure;
 }
 
 .nav {
@@ -57,13 +57,13 @@
     background-color: lightslategray;
 }
 
-/* backend css */
+/* admin css */
 .content-admin {
     height: 80vh;
     /* background-color: blueviolet; */
 }
 
-.backend-main {
+.admin-main {
     width: 100%;
     height: 80vh;
     background-color: rgb(129, 216, 208);
@@ -99,3 +99,19 @@
 .navlink:hover::after {
     width: 100%;
 }
+
+.backend-box {
+    width: 90%;
+    height: 80vh;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.backend-logo {
+    background-color: rgb(129, 216, 208);
+    /* width: 80%; */
+    height: 5vh;
+    margin: auto;
+    margin-top: 10px;
+}
+
