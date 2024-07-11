@@ -8,30 +8,6 @@
     <title>My Tiffany Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <!-- <script>
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const links = document.querySelectorAll('.navlink');
-            const mainContent = document.querySelector('.admin-main');
-
-            links.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault(); // 防止默認鏈接行為
-                    const url = this.getAttribute('href');
-
-                    fetch(url)
-                        .then(response => response.text())
-                        .then(data => {
-                            mainContent.innerHTML = data;
-                        })
-                        .catch(error => {
-                            console.error('Error loading content:', error);
-                            mainContent.innerHTML = '<p>Error loading content</p>';
-                        });
-                });
-            });
-        }); -->
-    <!-- </script> -->
 
 </head>
 
@@ -55,50 +31,47 @@
                 <div class="col d-flex">
                     <div class="col-1">
                         <div class="">
-                            <a class="navlink nav-link" href="./admin.html">Menu</a>
+                            <a class="navlink nav-link" href="#">Select Item</a>
                         </div>
                         <div class="">
                             <a class="navlink nav-link" href="?do=logo">logo</a>
                         </div>
                         <div class="div">
-                            <a class="navlink nav-link" href="#">navbar</a>
+                            <a class="navlink nav-link" href="?do=nav">nav</a>
                         </div>
                         <div class="div">
-                            <a class="navlink nav-link" href="#">banner</a>
+                            <a class="navlink nav-link" href="?do=banner">banner</a>
                         </div>
                         <div class="div">
-                            <a class="navlink nav-link" href="#">classic</a>
+                            <a class="navlink nav-link" href="?do=classic">classic</a>
                         </div>
                         <div class="div">
-                            <a class="navlink nav-link" href="#">early acccess</a>
+                            <a class="navlink nav-link" href="?do=early_acccess">early acccess</a>
                         </div>
                         <div class="div">
-                            <a class="navlink nav-link" href="#">stories card</a>
+                            <a class="navlink nav-link" href="?do=stories">stories card</a>
                         </div>
                         <div class="div">
-                            <a class="navlink nav-link" href="#">service</a>
+                            <a class="navlink nav-link" href="?do=service">service</a>
                         </div>
                         <div class="div">
-                            <a class="navlink nav-link" href="#">footer</a>
-                        </div>
-                        <div class="div">
-                            <a class="navlink nav-link" href="#">admin acc</a>
+                            <a class="navlink nav-link" href="?do=admin">admin acc</a>
                         </div>
                         <!-- menu end-->
-                         
+
                     </div>
 
                     <!-- admin-main -->
                     <div class="col admin-main w-100">
                         <?php
-                        $do = $_GET['do']??'aaa';
-                        $file = "./backend/{$do}.html";
+                        $do = $_GET['do'] ?? 'error';
+                        $file = "./backend/{$do}.php";
                         if (file_exists($file)) {
                             include_once $file;
                         } else {
-                            echo "hello";
+                            echo "PLS WAIT";
                         }
-                        
+
                         ?>
 
                     </div>
@@ -113,7 +86,7 @@
             <div class="admin-footer mt-1"></div>
             <div class="text-center mt-3">
                 © T&CO. 2024
-            </div>    
+            </div>
             <!-- content-footer -->
         </div>
 </body>
