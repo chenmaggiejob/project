@@ -8,7 +8,7 @@
     <title>My Tiffany Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <script>
+    <!-- <script>
 
         document.addEventListener("DOMContentLoaded", function () {
             const links = document.querySelectorAll('.navlink');
@@ -30,8 +30,8 @@
                         });
                 });
             });
-        });
-    </script>
+        }); -->
+    <!-- </script> -->
 
 </head>
 
@@ -58,7 +58,7 @@
                             <a class="navlink nav-link" href="./admin.html">Menu</a>
                         </div>
                         <div class="">
-                            <a class="navlink nav-link" href="./backend/logo.html">logo</a>
+                            <a class="navlink nav-link" href="?do=logo">logo</a>
                         </div>
                         <div class="div">
                             <a class="navlink nav-link" href="#">navbar</a>
@@ -89,7 +89,17 @@
                     </div>
 
                     <!-- admin-main -->
-                    <div class="col admin-main">
+                    <div class="col admin-main w-100">
+                        <?php
+                        $do = $_GET['do']??'aaa';
+                        $file = "./backend/{$do}.html";
+                        if (file_exists($file)) {
+                            include_once $file;
+                        } else {
+                            echo "hello";
+                        }
+                        
+                        ?>
 
                     </div>
                     <!-- backend-main end -->
