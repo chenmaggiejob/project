@@ -29,7 +29,7 @@
             <div class="row mt-1">
                 <!-- menu -->
                 <div class="col d-flex">
-                    <div class="col-1" style="background-color: rgb(200, 240, 235);">
+                    <div class="col-1" style="background-color: rgb(250, 250, 250);">
                         <div class="text-center mt-3 mb-3" style="font-weight: bold;font-size:24px;color:rgb(129, 216, 208)">
                             CMS
                         </div>
