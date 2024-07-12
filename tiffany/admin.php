@@ -29,9 +29,9 @@
             <div class="row mt-1">
                 <!-- menu -->
                 <div class="col d-flex">
-                    <div class="col-1">
-                        <div class="">
-                            <a class="navlink nav-link" href="#">Select Item</a>
+                    <div class="col-1" style="background-color: rgb(200, 240, 235);">
+                        <div class="text-center mt-3 mb-3" style="font-weight: bold;font-size:24px;color:rgb(129, 216, 208)">
+                            CMS
                         </div>
                         <div class="">
                             <a class="navlink nav-link" href="?do=logo">logo</a>
@@ -69,9 +69,10 @@
                         if (file_exists($file)) {
                             include_once $file;
                         } else {
-                            echo "PLS WAIT";
+                            echo '<h1 style="font-size: 72px; font-weight: bold; color:rgb(129, 216, 208);
+                            text-decoration: underline; text-align: center; line-height: 50vh; 
+                            display: flex; justify-content: center; align-items: center;">Content Management System</h1>';
                         }
-
                         ?>
 
                     </div>
