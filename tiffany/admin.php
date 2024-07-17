@@ -70,7 +70,7 @@
                             include_once $file;
                         } else {
                             echo '<h1 style="font-size: 72px; font-weight: bold; color:rgb(129, 216, 208);
-                            text-decoration: underline; text-align: center; line-height: 50vh; 
+                             text-align: center; line-height: 50vh; 
                             display: flex; justify-content: center; align-items: center;">Content Management System</h1>';
                         }
                         ?>
