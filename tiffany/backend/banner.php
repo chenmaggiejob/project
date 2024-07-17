@@ -22,67 +22,64 @@
             </div>
         </div>
     </div>
+    <div>
+        <form action="">
 
+            <div class="content-box backend-box mt-3">
+
+                <div class="d-grid">
+                    <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">
+                        <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
+                    </button>
+                </div>
+
+                <table class="table table-bordered text-center mt-2">
+                    <tr>
+                        <th style="width: 25%;">Banner Image</th>
+                        <th style="width: 15%;">Alt</th>
+                        <th style="width: 20%;">Desciption</th>
+                        <th style="width: 5%;">Show</th>
+                        <th style="width: 5%;">Delete</th>
+                        <th style="width: 20%;">Option</th>
+                    </tr>
+                    <tr>
+                        <td class="tvalign">
+                            <img src="" alt="">
+                        </td>
+
+                        <td class="tvalign">
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                        </td>
+
+                        <td class="tvalign">
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                        </td>
+
+                        <td class="tvalign">
+                            <input type="radio">
+                        </td>
+
+                        <td class="tvalign">
+                            <input type="checkbox">
+                        </td>
+
+                        <td class="tvalign">
+                            <button class="btn btn-primary">
+                                <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
+                            </button>
+                            <button class="btn btn-success" type="submit">
+                                <img src="../image/icon/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                            </button>
+                            <button class="btn btn-secondary">
+                                <img src="../image/icon/restart_alt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+
+
+        </form>
     </div>
-    <form action="">
-
-        <div class="content-box backend-box mt-3">
-
-            <div class="d-grid">
-                <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">
-                    <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt=""
-                        style="width: 32px;height: 32px;">
-                </button>
-            </div>
-
-            <table class="table table-bordered text-center mt-2">
-                <tr>
-                    <th style="width: 25%;">Banner Image</th>
-                    <th style="width: 15%;">Alt</th>
-                    <th style="width: 20%;">Desciption</th>
-                    <th style="width: 5%;">Show</th>
-                    <th style="width: 5%;">Delete</th>
-                    <th style="width: 20%;">Option</th>
-                </tr>
-                <tr>
-                    <td class="tvalign">
-                        <img src="" alt="">
-                    </td>
-
-                    <td class="tvalign">
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                    </td>
-
-                    <td class="tvalign">
-                        <input type="text" class="form-control" id="validationCustom03" required>
-                    </td>
-                    
-                    <td class="tvalign">
-                        <input type="radio">
-                    </td>
-
-                    <td class="tvalign">
-                        <input type="checkbox">
-                    </td>
-
-                    <td class="tvalign">
-                        <button class="btn btn-primary">
-                            <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt=""
-                                style="width: 32px; height: 32px;">
-                        </button>
-                        <button class="btn btn-success" type="submit">
-                            <img src="../image/icon/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                        </button>
-                        <button class="btn btn-secondary">
-                            <img src="../image/icon/restart_alt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                        </button>
-                    </td>
-                </tr>
-            </table>
-
-
-    </form>
-
 
 </body>
 
