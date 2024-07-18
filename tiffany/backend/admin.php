@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="backend-box backend-logo">
+    <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
                 <h1>ADMIN</h1>
@@ -37,8 +37,8 @@
                     <tr>
                         <th style="width: 15%;">Account</th>
                         <th style="width: 20%;">Password</th>
-                        <th style="width: 5%;">Show</th>
-                        <th style="width: 5%;">Delete</th>
+                        <!-- <th style="width: 5%;">Show</th>
+                        <th style="width: 5%;">Delete</th> -->
                         <th style="width: 20%;">Option</th>
                     </tr>
                     <tr>
@@ -51,13 +51,13 @@
                             <input type="text" class="form-control" id="validationCustom03" required>
                         </td>
 
-                        <td class="tvalign">
+                        <!-- <td class="tvalign">
                             <input type="radio">
                         </td>
 
                         <td class="tvalign">
                             <input type="checkbox">
-                        </td>
+                        </td> -->
 
                         <td class="tvalign">
                             <button class="btn btn-success" type="submit">

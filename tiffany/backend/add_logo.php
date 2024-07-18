@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="backend-box backend-logo">
+    <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
                 <h1>LOGO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
@@ -35,7 +35,7 @@
                         <th style="width: 30%;">LOGO Image</th>
                         <th style="width: 20%;">Alt Text</th>
                         <th style="width: 5%;">Show</th>
-                        <th style="width: 5%;">Delete</th>
+
                     </tr>
                     <tr>
                         <td class="tvalign">
@@ -48,10 +48,6 @@
 
                         <td class="tvalign">
                             <input type="radio">
-                        </td>
-
-                        <td class="tvalign">
-                            <input type="checkbox">
                         </td>
                     </tr>
 

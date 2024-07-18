@@ -28,33 +28,33 @@
         <div class="content-admin">
             <div class="row mt-1">
                 <!-- menu -->
-                <div class="d-flex">
-                    <div class="" style="background-color: rgb(250, 250, 250); width:10%;">
+                <div class="col d-flex">
+                    <div class="col-1" style="background-color: rgb(250, 250, 250);">
                         <div class="text-center mt-3 mb-3" style="font-weight: bold;font-size:24px;color:rgb(129, 216, 208)">
                             CMS
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="">
                             <a class="navlink nav-link" href="?do=logo">logo</a>
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="div">
                             <a class="navlink nav-link" href="?do=nav">nav</a>
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="div">
                             <a class="navlink nav-link" href="?do=banner">banner</a>
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="div">
                             <a class="navlink nav-link" href="?do=classic">classic</a>
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="div">
                             <a class="navlink nav-link" href="?do=early_acccess">early acccess</a>
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="div">
                             <a class="navlink nav-link" href="?do=stories">stories card</a>
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="div">
                             <a class="navlink nav-link" href="?do=service">service</a>
                         </div>
-                        <div class="" style="margin-left: 15px;">
+                        <div class="div">
                             <a class="navlink nav-link" href="?do=admin">admin acc</a>
                         </div>
                         <!-- menu end-->
@@ -69,7 +69,9 @@
                         if (file_exists($file)) {
                             include_once $file;
                         } else {
-                            include "./frontend/main.php";
+                            echo '<h1 style="font-size: 72px; font-weight: bold; color:rgb(129, 216, 208);
+                             text-align: center; line-height: 50vh; 
+                            display: flex; justify-content: center; align-items: center;">Content Management System</h1>';
                         }
                         ?>
 

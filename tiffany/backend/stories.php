@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="backend-box backend-logo">
+    <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
                 <h1>STORIES</h1>
