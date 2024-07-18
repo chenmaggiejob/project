@@ -11,19 +11,19 @@
 </head>
 
 <body>
-    <div class="backend-box mt-3 w-50">
+    <div class="backend-box mt-5 w-50">
         <div class="backend-main">
             Content Management System
         </div>
         <div class="mt-5">
-            <form action="?" class="was-validated">
+            <form action="../api/check_login.php" method="post" class="was-validated">
                 <div class="mb-3 mt-3">
                     <label for="acc" class="form-label">Account:</label>
                     <input type="text" class="form-control" id="acc" placeholder="Enter Account" name="acc" required>
                 </div>
                 <div class="mb-3">
                     <label for="pwd" class="form-label">Password:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pswd" required>
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" required>
                 </div>
                 <div class="d-grid mt-5">
                     <button type="submit" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">Login</button>
