@@ -11,10 +11,20 @@
 </head>
 
 <body>
+    <?php
+    if (isset($_SESSION['login'])) {
+
+    
+    ?>
     <div class="backend-box mt-3 w-50">
         <div class="backend-main">
             Content Management System
         </div>
+        <?php
+    } else {
+
+    
+        ?>
         <div class="mt-5">
             <form action="?" class="was-validated">
                 <div class="mb-3 mt-3">
@@ -32,6 +42,9 @@
             </form>
         </div>
     </div>
+    <?php
+    }
+    ?>
 </body>
 
 </html>
