@@ -12,11 +12,14 @@
 
 <body>
     <div class="backend-box mt-5 w-50">
-        <div class="backend-main">
+        <div class="logo mt-5">
+
+        </div>
+        <div class="backend-main mt-5">
             Content Management System
         </div>
         <div class="mt-5">
-            <form action="../api/check_login.php" method="post" class="was-validated">
+            <form action="../api/login.php" method="post" class="was-validated">
                 <div class="mb-3 mt-3">
                     <label for="acc" class="form-label">Account:</label>
                     <input type="text" class="form-control" id="acc" placeholder="Enter Account" name="acc" required>
@@ -26,7 +29,7 @@
                     <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" required>
                 </div>
                 <div class="d-grid mt-5">
-                    <button type="submit" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">Login</button>
+                    <button type="submit" class="btn" style="color:white; border: 0px;background-color: rgb(129, 216, 208);">Login</button>
                     <button type="reset" class="btn  btn-secondary mt-3">Reset</button>
                 </div>
             </form>

@@ -1,3 +1,6 @@
+<?php
+include_once "./api/base.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +14,7 @@
 </head>
 
 <body>
+
     <div class="container-box">
 
         <!-- container-header sticky -->
@@ -22,10 +26,28 @@
             <!-- logo end-->
 
             <!-- nav -->
-            <div class="nav">
-                <a href="./frontend/login.php">login</a>
-            </div>
+            <?php
+            if (isset($_SESSION['login'])) {
+            ?>
+                <div class="nav">
 
+                    <div class="d-flex justify-content-center align-items-center">
+                        <?= $_SESSION['login'] ?>
+                    </div>
+                    <div class="">
+                        <a class="nav-link" href="./frontend/login.php">logout</a>
+                    </div>
+
+                </div>
+            <?php
+            } else {
+            ?>
+                <div class="nav">
+                    <a class="nav-link" href="./frontend/login.php">login</a>
+                </div>
+            <?php
+            }
+            ?>
             <!-- nav end-->
         </div>
         <!-- content-header stick end-->

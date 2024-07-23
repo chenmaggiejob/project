@@ -35,29 +35,41 @@
 
                 <table class="table table-bordered text-center mt-2">
                     <tr>
-                        <th style="width: 15%;">Account</th>
+                        <th style="width: 20%;">Account</th>
                         <th style="width: 20%;">Password</th>
+                        <th style="width: 20%;">Name</th>
+                        <th style="width: 20%;">Role</th>
                         <!-- <th style="width: 5%;">Show</th>
                         <th style="width: 5%;">Delete</th> -->
-                        <th style="width: 20%;">Option</th>
+                        <th style="width: 5%;">Delete</th>
+                        <th style="width: 15%;">Option</th>
                     </tr>
                     <tr>
 
                         <td class="tvalign">
                             <input type="text" class="form-control" id="validationCustom03" required>
                         </td>
-
+                        <td class="tvalign">
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                        </td>
                         <td class="tvalign">
                             <input type="text" class="form-control" id="validationCustom03" required>
                         </td>
 
+                        <td>
+                            <select class="form-select" aria-label="Default select example">
+                                <option class="text-center" value="1">Regular User</option>
+                                <option class="text-center" value="2">Administrator</option>
+                            </select>
+                        </td>
+
                         <!-- <td class="tvalign">
                             <input type="radio">
-                        </td>
+                        </td> -->
 
                         <td class="tvalign">
                             <input type="checkbox">
-                        </td> -->
+                        </td>
 
                         <td class="tvalign">
                             <button class="btn btn-success" type="submit">

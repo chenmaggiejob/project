@@ -38,35 +38,43 @@
                         <th style="width: 5%;">Delete</th>
                         <th style="width: 20%;">Option</th>
                     </tr>
-                    <tr>
-                        <td class="tvalign">
-                            <img style="width: 100px; height: 25px;" src="../image/logo/logo.png" alt="">
-                        </td>
+                    <?php
+                    $Logo = new DB('logo');
+                    $data = $Logo->all();
+                    foreach ($data as $key => $value) {
+                    ?>
+                        <tr>
+                            <td class="tvalign">
+                                <img style="width: 100px; height: 25px;" src="./image/logo/<?= $value['img'] ?>" alt="">
+                            </td>
 
-                        <td class="tvalign">
-                            <input type="text" class="form-control" id="validationCustom03" required>
-                        </td>
+                            <td class="tvalign">
+                                <input type="text" class="form-control" id="validationCustom03" required value="<?= $value['alt'] ?>">
+                            </td>
 
-                        <td class="tvalign">
-                            <input type="radio">
-                        </td>
+                            <td class="tvalign">
+                                <input type="radio">
+                            </td>
 
-                        <td class="tvalign">
-                            <input type="checkbox">
-                        </td>
+                            <td class="tvalign">
+                                <input type="checkbox">
+                            </td>
 
-                        <td class="tvalign">
-                            <button class="btn btn-primary">
-                                <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
-                            </button>
-                            <button class="btn btn-success" type="submit">
-                                <img src="../image/icon/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                            </button>
-                            <button class="btn btn-secondary">
-                                <img src="../image/icon/restart_alt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
-                            </button>
-                        </td>
-                    </tr>
+                            <td class="tvalign">
+                                <button class="btn btn-primary">
+                                    <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
+                                </button>
+                                <button class="btn btn-success" type="submit">
+                                    <img src="../image/icon/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </button>
+                                <button class="btn btn-secondary">
+                                    <img src="../image/icon/restart_alt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                                </button>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
                 </table>
         </form>
     </div>

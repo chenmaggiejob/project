@@ -1,5 +1,6 @@
 <?php
 session_start();
+$_SESSION['status'] = 0;
 class DB
 {
     public $table;
@@ -10,6 +11,27 @@ class DB
     {
         $this->table = $table;
         $this->pdo = new PDO($this->dsn, 'root', '');
+    }
+
+    public function all(...$arg)
+    {
+        $sql = "select * from  `$this->table`";
+
+        if (isset($arg[0])) {
+            if (is_array($arg[0])) {
+                $tmp = $this->a2s($arg[0]);
+                $sql .= " where " . join(" && ", $tmp);
+            } else {
+                $sql .= $arg[0];
+            }
+        }
+
+        if (isset($arg[1])) {
+            $sql .= $arg[1];
+        }
+        //echo $sql;
+
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function count(...$arg)
@@ -37,6 +59,37 @@ class DB
             $tmp[] = "`$key` = '$value'";
         }
         return $tmp;
+    }
+
+    public function find($arg)
+    {
+        $sql = "select * from `$this->table` ";
+        if (is_array($arg)) {
+            $tmp = $this->a2s($arg);
+            $sql .= " where " . join(" && ", $tmp);
+        } else {
+            $sql .= " where `id`='$arg'";
+        }
+        //echo $sql;
+
+        return $this->pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function save($arg)
+    {
+        if (isset($arg['id'])) {
+            //update
+            $tmp = $this->a2s($arg);
+            $sql = "update `$this->table` set " . join(",", $tmp);
+            $sql .= " where `id`='{$arg['id']}'";
+        } else {
+            //insert
+            $keys = array_keys($arg);
+            $sql = "insert into `$this->table` (`" . join("`,`", $keys) . "`) 
+                   values('" . join("','", $arg) . "')";
+        }
+
+        return $this->pdo->exec($sql);
     }
 }
 

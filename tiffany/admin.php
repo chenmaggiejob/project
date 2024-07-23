@@ -1,3 +1,7 @@
+<?php
+include_once "./api/base.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,8 +34,8 @@
                 <!-- menu -->
                 <div class="d-flex">
                     <div class="" style="background-color: rgb(250, 250, 250); width:10%;">
-                        <div class="text-center mt-3 mb-3" style="font-weight: bold;font-size:24px;color:rgb(129, 216, 208)">
-                            CMS
+                        <div class="text-center mt-3 mb-3" style="font-weight: bold;font-size:20px;color:rgb(129, 216, 208)">
+                            <a class="navlink nav-link" href=""><?= $_SESSION['login'] ?></a>
                         </div>
                         <div class="" style="margin-left: 15px;">
                             <a class="navlink nav-link" href="?do=logo">logo</a>
@@ -69,7 +73,7 @@
                         if (file_exists($file)) {
                             include_once $file;
                         } else {
-                            include "./frontend/main.php";
+                            include "./backend/main.php";
                         }
                         ?>
 

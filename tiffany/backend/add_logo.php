@@ -24,33 +24,26 @@
     </div>
 
     <div>
-        <form action="">
-
+        <form action="./api/add_logo.php" enctype="multipart/form-data" method="post">
             <div class="content-box backend-box mt-3">
-
                 <div class="add-header"></div>
-
                 <table class="table table-bordered text-center mt-3">
                     <tr>
                         <th style="width: 30%;">LOGO Image</th>
                         <th style="width: 20%;">Alt Text</th>
-                        <th style="width: 5%;">Show</th>
-
+                        <!-- <th style="width: 5%;">Show</th> -->
                     </tr>
                     <tr>
                         <td class="tvalign">
-                            <input class="form-control" type="file" id="formFile">
+                            <input class="form-control" type="file" id="formFile" name="img">
                         </td>
-
                         <td class="tvalign">
-                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <input type="text" class="form-control" id="validationCustom03" name="alt" required>
                         </td>
-
-                        <td class="tvalign">
-                            <input type="radio">
-                        </td>
+                        <!-- <td class="tvalign">
+                            <input type="radio" name="sh" value="1" checked>
+                        </td> -->
                     </tr>
-
                 </table>
 
                 <div class="content-box beckend-box mt-5">
