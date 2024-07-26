@@ -105,4 +105,4 @@ function  to($url)
     header("location:" . $url);
 }
 
-$Admin = new DB('admin');
+$Admin = new DB('tf_admin');

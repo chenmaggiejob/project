@@ -39,7 +39,7 @@
                         <th style="width: 20%;">Option</th>
                     </tr>
                     <?php
-                    $Logo = new DB('logo');
+                    $Logo = new DB('tf_logo');
                     $data = $Logo->all();
                     foreach ($data as $key => $value) {
                     ?>

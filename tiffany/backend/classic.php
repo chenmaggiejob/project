@@ -44,7 +44,7 @@
                     </tr>
                     <tr>
                         <td class="tvalign">
-                            <img style="width: 100px; height: 25px;" src="../image/logo/logo.png" alt="">
+                        <img style="width: 100px; height: 25px;" src="./image/logo/<?= $value['img'] ?>" alt="">
                         </td>
 
                         <td class="tvalign">

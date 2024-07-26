@@ -1,6 +1,6 @@
 <?php
 include_once "./base.php";
-$Logo = new DB('logo');
+$Logo = new DB('tf_logo');
 // dd($_FILES);
 // echo "<hr>";
 if (!empty($_FILES['img']['tmp_name'])) {
