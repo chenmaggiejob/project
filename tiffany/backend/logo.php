@@ -6,7 +6,7 @@
         </div>
     </div>
     <div>
-        <form action="./api/edit.php" method="post">
+        <form action="" method="post">
             <div class="backend-box mt-3">
                 <div class="d-grid">
                     <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_logo'">

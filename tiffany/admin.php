@@ -22,13 +22,13 @@ include_once "./api/base.php";
         <!-- container-header sticky -->
         <div class="logo mt-1">
             <!-- logo -->
-
             <?php
             $Logo = new DB('tf_logo');
             $data = $Logo->find(['sh' => 1]);
             ?>
-            <img class="logo img-fluid" src="./image/logo/<?= $data["img"] ?>" alt="">
-
+            <a href="./index.php">
+                <img class="logo img-fluid" src="./image/logo/<?= $data["img"] ?>" alt="">
+            </a>
             <!-- logo end-->
         </div>
         <!-- content-header stick end-->
