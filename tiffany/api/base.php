@@ -88,8 +88,19 @@ class DB
             $sql = "insert into `$this->table` (`" . join("`,`", $keys) . "`) 
                    values('" . join("','", $arg) . "')";
         }
-
         return $this->pdo->exec($sql);
+    }
+
+    function del($data)
+    {
+        $sql = "DELETE FROM {$this->table} WHERE id = '{$data['id']}'";
+        return $this->pdo->exec($sql);
+    }
+
+
+    function q($sql)
+    {
+        return $this->pdo->query($sql)->fetchAll(PDO::FETCH_ASSOC);
     }
 }
 

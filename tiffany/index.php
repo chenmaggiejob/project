@@ -21,33 +21,69 @@ include_once "./api/base.php";
         <div class="content-header">
             <!-- logo -->
             <div class="logo">
-                logo
+                <?php
+                $Logo = new DB('tf_logo');
+                $data = $Logo->find(['sh' => 1]);
+                ?>
+                <img class="logo img-fluid" src="./image/logo/<?= $data["img"] ?>" alt="">
             </div>
             <!-- logo end-->
 
             <!-- nav -->
-            <?php
-            if (isset($_SESSION['login'])) {
-            ?>
-                <div class="nav">
-
-                    <div class="d-flex justify-content-center align-items-center">
-                        <?= $_SESSION['login'] ?>
-                    </div>
-                    <div class="">
-                        <a class="nav-link" href="./frontend/login.php">logout</a>
-                    </div>
-
+            <nav class="navbar navbar-expand-sm nav">
+                <div class="container-fluid">
+                    <!-- Links -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link 3</a>
+                        </li>
+                        <?php
+                        if (isset($_SESSION['role'])) {
+                            if ($_SESSION['role'] == 1) {
+                        ?>
+                                <li class="nav-item">
+                                    <span class="nav-link">
+                                        <?= $_SESSION['login'] ?>
+                                    </span>
+                                </li>
+                                <li class="nav-item ms-auto">
+                                    <a class="nav-link" href="./admin.php">CMS</a>
+                                </li>
+                                <li class="nav-item ms-auto">
+                                    <a class="nav-link" href="./api/logout.php">Logout</a>
+                                </li>
+                            <?php
+                            } else {
+                            ?>
+                                <li class="nav-item">
+                                    <span class="nav-link">
+                                        <?= $_SESSION['login'] ?>
+                                    </span>
+                                </li>
+                                <li class="nav-item ms-auto">
+                                    <a class="nav-link" href="./api/logout.php">Logout</a>
+                                </li>
+                            <?php
+                            }
+                            ?>
+                        <?php
+                        } else {
+                        ?>
+                            <li class="nav-item ms-auto">
+                                <a class="nav-link" href="./frontend/login.php">Login</a>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                    </ul>
                 </div>
-            <?php
-            } else {
-            ?>
-                <div class="nav">
-                    <a class="nav-link" href="./frontend/login.php">login</a>
-                </div>
-            <?php
-            }
-            ?>
+            </nav>
             <!-- nav end-->
         </div>
         <!-- content-header stick end-->

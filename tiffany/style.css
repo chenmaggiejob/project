@@ -16,7 +16,8 @@
 
 .logo {
     height: 10vh;
-    background-color: azure;
+    text-align: center;
+    /* background-color: azure; */
 }
 
 .nav {
@@ -104,8 +105,48 @@
     /* 添加動畫效果 */
 }
 
+.navlink:hover {
+    color: rgb(129, 216, 208);
+}
+
 /* 當滑鼠懸停時，擴展底線的寬度 */
 .navlink:hover::after {
+    width: 100%;
+}
+
+/* 導航連結的基本樣式 */
+.navlink2 {
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    /* 移除預設底線 */
+    color: rgb(167, 167, 167);
+    /* 設定文字顏色 */
+    padding: 5px 0;
+    /* 給連結一些內邊距 */
+}
+
+/* 定義偽元素並設置底線的初始狀態 */
+.navlink2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(129, 216, 208);
+    /* 底線顏色 */
+    transition: width 0.3s ease-in-out;
+    /* 添加動畫效果 */
+}
+
+.navlink2:hover {
+    color: rgb(129, 216, 208);
+}
+
+/* 當滑鼠懸停時，擴展底線的寬度 */
+.navlink2:hover::after {
     width: 100%;
 }
 
@@ -125,10 +166,8 @@
 }
 
 button>img {
-
     width: 32px;
     height: 32px;
-
 }
 
 td.tvalign {

@@ -40,9 +40,6 @@
                         <td class="tvalign">
                             <input type="text" class="form-control" id="validationCustom03" name="alt" required>
                         </td>
-                        <!-- <td class="tvalign">
-                            <input type="radio" name="sh" value="1" checked>
-                        </td> -->
                     </tr>
                 </table>
 
