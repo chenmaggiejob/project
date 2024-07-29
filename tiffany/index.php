@@ -14,9 +14,6 @@ include_once "./api/base.php";
 </head>
 
 <body>
-
-
-
     <!-- container-header sticky -->
     <div class="container-box content-header sticky-top" style="background-color: rgba(255,255,255,0.7); backdrop-filter: blur(0px);">
         <!-- logo -->
