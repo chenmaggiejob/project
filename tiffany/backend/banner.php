@@ -30,7 +30,7 @@
                     ?>
                         <tr>
                             <td class="tvalign">
-                                <img style="width: 100px; height: 25px;" src="./image/banner/<?= $value['img'] ?>" alt="">
+                                <img class="img-fluid" src="./image/banner/<?= $value['img'] ?>" alt="">
                             </td>
                             <td class="tvalign">
                                 <input type="text" class="form-control" id="validationCustom03" required value="<?= $value['alt'] ?>" style="border: none;" class="text-center" readonly>

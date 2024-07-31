@@ -30,7 +30,7 @@ $value = $Logo->find($_GET['id']);
 
                 <tr>
                     <td class="tvalign">
-                        <img style="width: 100px; height: 25px;" src="./image/logo/<?= $value['img'] ?>" alt="">
+                        <img class="img-fluid" src="./image/logo/<?= $value['img'] ?>" alt="">
                     </td>
 
                     <td class="tvalign">

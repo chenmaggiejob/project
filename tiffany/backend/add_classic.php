@@ -14,18 +14,18 @@
     <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
-                <h1>LOGO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
+                <h1>CLASSIC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
             </div>
         </div>
     </div>
 
     <div>
-        <form action="./api/add_logo.php" enctype="multipart/form-data" method="post">
+        <form action="./api/add_classic.php" enctype="multipart/form-data" method="post">
             <div class="content-box backend-box mt-3">
                 <div class="add-header"></div>
                 <table class="table table-bordered text-center mt-3">
                     <tr>
-                        <th style="width: 30%;">LOGO Image</th>
+                        <th style="width: 30%;">Classic Image</th>
                         <th style="width: 20%;">Alt Text</th>
                         <!-- <th style="width: 5%;">Show</th> -->
                     </tr>

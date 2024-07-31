@@ -1,17 +1,17 @@
+<div class="backend-box backend-title">
+    <div class="row">
+        <div class="text-center">
+            <h1>CLASSIC</h1>
+        </div>
+    </div>
+</div>
 <div>
     <form action="" method="post">
-        <div class="backend-box mt-0">
-            <div class="sticky-top" style="background-color: white;">
-                <div class="row">
-                    <div class="col-11 text-center">
-                        <h1>CLASSIC</h1>
-                    </div>
-                </div>
-                <div class="d-grid">
-                    <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_classic'">
-                        <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
-                    </button>
-                </div>
+        <div class="backend-box mt-3">
+            <div class="d-grid">
+                <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_classic'">
+                    <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
+                </button>
             </div>
             <table class="table table-bordered text-center mt-2">
                 <tr>
@@ -55,7 +55,7 @@
 
 <script>
     function del(id) {
-        $.post("./api/del_classic.php", {
+        $.post("./api/del_logo.php", {
             id
         }, (res) => {
             if (res == 1) {

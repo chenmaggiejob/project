@@ -71,7 +71,7 @@ include_once "./api/base.php";
                     </div>
 
                     <!-- admin-main -->
-                    <div class="col admin-main w-100">
+                    <div class="col admin-main w-100 overflow-scroll">
                         <?php
                         $do = $_GET['do'] ?? 'error';
                         $file = "./backend/{$do}.php";

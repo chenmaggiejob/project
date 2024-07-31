@@ -65,6 +65,7 @@
 .admin-main {
     width: 100%;
     height: 80vh;
+    /* overflow: hidden; */
     /* background-color: rgb(129, 216, 208); */
 }
 
@@ -149,9 +150,10 @@
 
 .backend-box {
     width: 90%;
-    height: 80vh;
+    /* height: 70vh; */
     margin: auto;
     margin-top: 10px;
+    /* overflow: hidden; */
 }
 
 .backend-title {
