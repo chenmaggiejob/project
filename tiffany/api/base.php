@@ -5,12 +5,14 @@ class DB
 {
     public $table;
     public $dsn = "mysql:host=localhost;charset=utf8;dbname=mytiffany;";
+    // public $dsn = "mysql:host=localhost;charset=utf8;dbname=s1130110;";
     public $pdo;
 
     public function __construct($table)
     {
         $this->table = $table;
         $this->pdo = new PDO($this->dsn, 'root', '');
+        // $this->pdo = new PDO($this->dsn, 's1130110', 's1130110');
     }
 
     public function all(...$arg)
