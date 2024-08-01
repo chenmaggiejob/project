@@ -40,7 +40,10 @@
 }
 
 .classic {
-    background-color: lightpink;
+    /* background-color: lightpink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .focus {

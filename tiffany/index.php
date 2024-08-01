@@ -97,20 +97,20 @@ include_once "./api/base.php";
 
     <!-- content-classic -->
     <div class="container-fluid content classic container-box">
+        <?php
+        $Classic = new DB('tf_classic');
+        $data = $Classic->all(['sh' => 1]);
+        ?>
+
         <div class="row">
-            <div class="col">
-                img
-            </div>
-            <div class="col">
-                img
-            </div>
-            <div class="col">
-                img
-            </div>
-            <div class="col">
-                img
-            </div>
+            <?php foreach ($data as $key => $value) : ?>
+                <div class="classic col">
+                    <img class="img-fluid" style="width: 85%" src="./image/classic/<?= $value["img"] ?>" alt="">
+                </div>
+            <?php endforeach ?>
         </div>
+
+
     </div>
     <!-- content-classic end -->
 
