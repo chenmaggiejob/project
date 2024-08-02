@@ -14,18 +14,18 @@
     <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
-                <h1>BANNER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
+                <h1>RING&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
             </div>
         </div>
     </div>
 
     <div>
-        <form action="./api/add_banner.php" enctype="multipart/form-data" method="post">
+        <form action="./api/add_ring.php" enctype="multipart/form-data" method="post">
             <div class="content-box backend-box mt-3">
                 <div class="add-header"></div>
                 <table class="table table-bordered text-center mt-3">
                     <tr>
-                        <th style="width: 20%;">Banner Image</th>
+                        <th style="width: 20%;">Ring Image</th>
                         <th style="width: 20%;">Alt Text</th>
                         <th style="width: 30%;">Title Text</th>
                         <th style="width: 30%;">Description</th>

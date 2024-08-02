@@ -46,22 +46,28 @@ include_once "./api/base.php";
                             </div>
                         </div>
                         <div class="" style="margin-left: 15px;">
-                            <a class="navlink" href="?do=logo">logo</a>
+                            <a class="navlink" href="?do=logo">Logo</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
-                            <a class="navlink" href="?do=banner">banner</a>
+                            <a class="navlink" href="?do=banner">Banner</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
-                            <a class="navlink" href="?do=classic">classic</a>
+                            <a class="navlink" href="?do=classic">Classic</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
-                            <a class="navlink" href="?do=early_acccess">early acccess</a>
+                            <a class="navlink" href="?do=ring">Ring</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
-                            <a class="navlink" href="?do=stories">stories card</a>
+                            <a class="navlink" href="?do=carousel">carousel</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
-                            <a class="navlink" href="?do=service">service</a>
+                            <a class="navlink" href="?do=early_acccess">Early Acccess</a>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <a class="navlink" href="?do=stories">Stories Card</a>
+                        </div>
+                        <div class="" style="margin-left: 15px;">
+                            <a class="navlink" href="?do=service">Service</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
                             <a class="navlink" href="?do=admin">admin acc</a>

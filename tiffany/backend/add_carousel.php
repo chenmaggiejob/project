@@ -14,22 +14,20 @@
     <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
-                <h1>BANNER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
+                <h1>CAROUSEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
             </div>
         </div>
     </div>
 
     <div>
-        <form action="./api/add_banner.php" enctype="multipart/form-data" method="post">
+        <form action="./api/add_carousel.php" enctype="multipart/form-data" method="post">
             <div class="content-box backend-box mt-3">
                 <div class="add-header"></div>
                 <table class="table table-bordered text-center mt-3">
                     <tr>
-                        <th style="width: 20%;">Banner Image</th>
+                        <th style="width: 30%;">carousel Image</th>
                         <th style="width: 20%;">Alt Text</th>
-                        <th style="width: 30%;">Title Text</th>
-                        <th style="width: 30%;">Description</th>
-
+                        <!-- <th style="width: 5%;">Show</th> -->
                     </tr>
                     <tr>
                         <td class="tvalign">
@@ -37,12 +35,6 @@
                         </td>
                         <td class="tvalign">
                             <input type="text" class="form-control" id="validationCustom03" name="alt" required>
-                        </td>
-                        <td class="tvalign">
-                            <input type="text" class="form-control" id="validationCustom03" name="title" required>
-                        </td>
-                        <td class="tvalign">
-                            <input type="text" class="form-control" id="validationCustom03" name="des" required>
                         </td>
                     </tr>
                 </table>

@@ -6,7 +6,7 @@ $value = $Classic->find($_GET['id']);
 <div class="backend-box backend-title">
     <div class="row">
         <div class="col-11 text-center">
-            <h1>CLASSIC</h1>
+            <h1>CLASSIC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDIT</h1>
         </div>
     </div>
 </div>

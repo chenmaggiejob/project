@@ -1,7 +1,7 @@
     <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
-                <h1>BANNER</h1>
+                <h1>Ring</h1>
             </div>
         </div>
     </div>
@@ -9,28 +9,28 @@
         <form action="" method="post">
             <div class="backend-box mt-3">
                 <div class="d-grid">
-                    <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_banner'">
+                    <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_ring'">
                         <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
                     </button>
                 </div>
                 <table class="table table-bordered text-center mt-2">
                     <tr>
-                        <th style="width: 20%;">Banner Image</th>
+                        <th style="width: 20%;">Ring Image</th>
                         <th style="width: 15%;">Alt Text</th>
-                        <th style="width: 15%;">Title Text</th>
-                        <th style="width: 30%;">Description</th>
+                        <th style="width: 20%;">Title Text</th>
+                        <th style="width: 20%;">Description</th>
                         <th style="width: 5%;">Show</th>
                         <th style="width: 20%;">Option</th>
                     </tr>
                     <?php
-                    $Banner = new DB('tf_banner');
-                    $data = $Banner->all();
+                    $Rings = new DB('tf_rings');
+                    $data = $Rings->all();
                     // dd($data);
                     foreach ($data as $key => $value) {
                     ?>
                         <tr>
                             <td class="tvalign">
-                                <img class="img-fluid" src="./image/banner/<?= $value['img'] ?>" alt="">
+                                <img class="img-fluid w-50 h-50" src="./image/carousel/<?= $value['img'] ?>" alt="">
                             </td>
                             <td class="tvalign">
                                 <input type="text" class="form-control" id="validationCustom03" required value="<?= $value['alt'] ?>" style="border: none;" class="text-center" readonly>
@@ -46,7 +46,7 @@
                                 <input type="hidden" name="id" value="<?= $value['id'] ?>;">
                             </td>
                             <td class="tvalign">
-                                <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_banner&id=<?= $value['id'] ?>'">
+                                <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_ring&id=<?= $value['id'] ?>'">
                                     <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
                                 </button>
                                 <button class="btn btn-danger" type="button" onclick="del(<?= $value['id'] ?>)">
@@ -63,7 +63,7 @@
 
     <script>
         function del(id) {
-            $.post("./api/del_banner.php", {
+            $.post("./api/del_ring.php", {
                 id
             }, (res) => {
                 if (res == 1) {

@@ -6,7 +6,7 @@ $value = $Banner->find($_GET['id']);
 <div class="backend-box backend-title">
     <div class="row">
         <div class="col-11 text-center">
-            <h1>BANNER</h1>
+            <h1>BANNER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EDIT</h1>
         </div>
     </div>
 </div>
@@ -24,7 +24,7 @@ $value = $Banner->find($_GET['id']);
                     <th style="width: 20%;">Change Banner Image</th>
                     <th style="width: 15%;">Alt Text</th>
                     <th style="width: 15%;">Title Text</th>
-                    <th style="width: 20%;">Desciption</th>
+                    <th style="width: 20%;">Description</th>
                     <th style="width: 10%;">Show</th>
                     <th style="width: 20%;">Option</th>
                 </tr>
@@ -45,7 +45,7 @@ $value = $Banner->find($_GET['id']);
                         <input type="text" class="form-control" id="validationCustom03" name="title" required value="<?= $value['title'] ?>">
                     </td>
                     <td class="tvalign">
-                        <input type="text" class="form-control" id="validationCustom03" name="desc" required value="<?= $value['desc'] ?>">
+                        <input type="text" class="form-control" id="validationCustom03" name="des" required value="<?= $value['des'] ?>">
                     </td>
 
                     <td class="tvalign">

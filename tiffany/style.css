@@ -36,11 +36,12 @@
 
 
 .rings {
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
+    /* height: 5vh; */
 }
 
 .classic {
-    /* background-color: lightpink; */
+    background-color: rgb(250, 250, 250);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -89,7 +89,7 @@ include_once "./api/base.php";
                 <?= $data["title"] ?>
             </h2>
             <p>
-                <?= $data["desc"] ?>
+                <?= $data["des"] ?>
             </p>
         </div>
     </div>
@@ -115,16 +115,52 @@ include_once "./api/base.php";
     <!-- content-classic end -->
 
     <!-- content-Rings -->
-    <div class="container-fluid content rings container-box">
+    <div class="container-fluid rings content container-box">
+        <?php
+        $Rings = new DB('tf_rings');
+        $data = $Rings->find(['sh' => 1]);
+        ?>
         <div class="row">
-            <div class="col bg-info">
-                img-fluid
+            <div class="col">
+                <img style="width:63%" src="./image/carousel/<?= $data['img'] ?>" alt="">
             </div>
-            <div class="col bg-danger">
-                text
+            <div class="col text-center">
+                <h2 style="padding-top: 15%;"> <?= $data["title"] ?> </h2>
+                <p> <?= $data["des"] ?> </p>
             </div>
-            <div class="col bg-info">
-                carousel
+
+            <?php
+            $Carousels = new DB('tf_carousels');
+            $data = $Carousels->find(['sh' => 1]);
+            ?>
+            <div id="forever" class="col carousel slide" data-bs-ride="carousel">
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#forever" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#forever" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#forever" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img style="width:63%" src="./image/carousel/<?= $data['img'] ?>" alt="" class="d-block">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/carousel/<?= $data['img'] ?>" alt="" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./image/carousel/<?= $data['img'] ?>" class="d-block w-100">
+                    </div>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#forever" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#forever" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </div>
