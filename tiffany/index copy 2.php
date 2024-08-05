@@ -10,7 +10,6 @@ include_once "./api/base.php";
 
     <title>My Tiffany</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -116,109 +115,98 @@ include_once "./api/base.php";
     <!-- content-classic end -->
 
     <!-- content-Rings -->
-    <div class="container-fluid rings content container-box mt-3">
+    <div class="container-fluid rings content container-box">
         <?php
         $Rings = new DB('tf_rings');
         $data = $Rings->find(['sh' => 1]);
         ?>
-        <div class="row h-100">
-            <div class="col h-100">
-                <img style="width:79%;" src="./image/carousel/<?= $data['img'] ?>" alt="<?= $data['alt'] ?>">
+        <div class="row">
+            <div class="col">
+                <img style="width:63%" src="./image/carousel/<?= $data['img'] ?>" alt="">
             </div>
             <div class="col text-center">
-                <h2 style="padding-top: 20%;"> <?= $data["title"] ?> </h2>
+                <h2 style="padding-top: 15%;"> <?= $data["title"] ?> </h2>
                 <p> <?= $data["des"] ?> </p>
             </div>
 
+            <?php
+            $Carousels = new DB('tf_carousels');
+            $data = $Carousels->all(['sh' => 1]);
+            ?>
             <div id="forever" class="col carousel slide" data-bs-ride="carousel">
-                <?php
-                $Carousels = new DB('tf_carousels');
-                $data = $Carousels->all(['sh' => 1]);
-                ?>
-
                 <!-- Indicators/dots -->
-                <!-- Carousel -->
-                <div id="forever" class="carousel slide h-100" data-bs-ride="carousel">
-                    <!-- Indicators/dots -->
-                    <div class="carousel-indicators">
-                        <?php
-                        foreach ($data as $key => $value) : ?>
-                            <button type="button" data-bs-target="#forever" data-bs-slide-to="<?= $key ?>" class="<?= $key === 0 ? 'active' : '' ?>"></button>
-                        <?php endforeach ?>
-                    </div>
-
-                    <!-- The slideshow/carousel -->
-                    <div class="carousel-inner h-100">
-                        <?php foreach ($data as $key => $value) : ?>
-                            <div class="carousel-item <?= $key === 0 ? 'active' : '' ?> content">
-                                <img src="./image/carousel/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>" class="d-block img-fluid">
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-
-                    <!-- Left and right controls/icons -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#forever" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#forever" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
+                <div class="carousel-indicators">
+                    <?php foreach ($Carousels as $key => $value) : ?>
+                        <button type="button" data-bs-target="#forever" data-bs-slide-to="<?= $key ?>" class="<?= $key === 0 ? 'active' : '' ?>"></button>
+                    <?php endforeach; ?>
                 </div>
+
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                    <?php foreach ($Carousels as $key => $value) : ?>
+                        <div class="carousel-item<?= $key === 0 ? 'active' : '' ?>">
+                            <img style="width:63%" src="./image/carousel/<?= $value['img'] ?>" alt="<?= $value['text'] ?>" class="d-block">
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#forever" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#forever" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
             </div>
         </div>
     </div>
     <!-- content-Rings end -->
 
+
+
     <!-- content-Early Access -->
-    <div class="container-box content mt-3">
+    <div class="content focus container-box">
         <div class="row">
             <div class="col">
-                <?php
-                $Early_acccess = new DB('tf_early_acccess');
-                $value = $Early_acccess->find(['sh' => 1]);
-                ?>
-                <iframe src="<?= $value['ytlink'] ?>" frameborder="0"></iframe>
+                youtube
             </div>
-            <div class="col text-center">
-                <img style="width:78%" src="./image/early_acccess/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
+            <div class="col">
+                col
             </div>
-            <div class="col text-center ">
-                <img style="width:78%" src="./image/early_acccess/<?= $value['img2'] ?>" alt="<?= $value['alt2'] ?>">
+            <div class="col">
+                col
             </div>
         </div>
     </div>
     <!-- content-Early Access end -->
 
     <!-- content-stroies -->
-    <div class="container-box mt-3">
-        <div class="row w-100 text-center">
-            <?php
-            $Stories = new DB('tf_stories');
-            $data = $Stories->all(['sh' => 1]);
-            foreach ($data as $key => $value) : ?>
-                <div class="col m-auto">
-                    <div class="card m-auto" style="width:500px">
-                        <img class="card-img-top" src="./image/stories/<?= $value['img'] ?>" alt="Card image" style="width:100%">
-                        <div class="card-body">
-                            <h4 class="card-title"><?= $value['title'] ?></h4>
-                            <p class="card-text"><?= $value['des'] ?></p>
-                            <a href="#" class="btn btn-primary"><?= $value['btn_name'] ?></a>
-                        </div>
-                    </div>
-                </div>
-            <?php endforeach ?>
+    <div class="content stroies container-box">
+        <div class="row">
+            <div class="col">
+                storiescard
+            </div>
+            <div class="col">
+                storiescard
+            </div>
+            <div class="col">
+                storiescard
+            </div>
         </div>
     </div>
     <!-- content-stroies end -->
 
     <!-- content-contactus -->
-    <div class="content contactus container-box mt-3">
+    <div class="content contactus container-box">
         <div class="row">
             <div class="col">
                 img
             </div>
             <div class="col">
                 service text
+            </div>
+            <div class="col">
+                form
             </div>
         </div>
     </div>
@@ -228,6 +216,18 @@ include_once "./api/base.php";
     <div class="footer mb-5 container-box">
         footer
     </div>
+    <!-- content-footer end -->
+
+    <!-- <div class="" style="width: 100%; height: 50px;">
+
+        </div> -->
+
+
+
+
+
+
+
 </body>
 
 </html>

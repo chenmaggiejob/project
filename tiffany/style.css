@@ -31,7 +31,7 @@
 }
 
 .content {
-    height: 40vh;
+    height: 50vh;
 }
 
 
@@ -51,8 +51,14 @@
     background-color: lightsalmon;
 }
 
+iframe {
+    width: 100%;
+    height: 50vh;
+}
+
 .stroies {
     background-color: lightgoldenrodyellow;
+    /* background-color: rgb(250, 250, 250); */
 }
 
 .contactus {

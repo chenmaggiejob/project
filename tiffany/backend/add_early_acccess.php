@@ -14,27 +14,45 @@
     <div class="backend-box backend-title">
         <div class="row">
             <div class="col-11 text-center">
-                <h1>LOGO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
+                <h1>EARLY_ACCCESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD</h1>
             </div>
         </div>
     </div>
 
     <div>
-        <form action="./api/add_logo.php" enctype="multipart/form-data" method="post">
+        <form action="./api/add_early_acccess.php" enctype="multipart/form-data" method="post">
             <div class="content-box backend-box mt-3">
                 <div class="add-header"></div>
                 <table class="table table-bordered text-center mt-3">
                     <tr>
-                        <th style="width: 30%;">LOGO Image</th>
-                        <th style="width: 20%;">Alt Text</th>
-                        <!-- <th style="width: 5%;">Show</th> -->
+                        <th style="width: 20%;">Youtube Link</th>
+                        <th style="width: 10%;">Itme1 Image</th>
+                        <th style="width: 10%;">Alt1</th>
+                        <th style="width: 10%;">Itme2 Image</th>
+                        <th style="width: 10%;">Alt2</th>
+                        <th style="width: 5%;">Show</th>
                     </tr>
                     <tr>
+                        <td class="tvalign">
+                            <input type="text" class="form-control" id="validationCustom03" name="ytlink" required>
+                        </td>
                         <td class="tvalign">
                             <input class="form-control" type="file" id="formFile" name="img">
                         </td>
                         <td class="tvalign">
                             <input type="text" class="form-control" id="validationCustom03" name="alt" required>
+                        </td>
+                        <td class="tvalign">
+                            <input class="form-control" type="file" id="formFile" name="img2">
+                        </td>
+                        <td class="tvalign">
+                            <input type="text" class="form-control" id="validationCustom03" name="alt2" required>
+                        </td>
+                        <td class="tvalign">
+                            <select name="sh" id="" class="form-select">
+                                <option value="0">hide</option>
+                                <option value="1">show</option>
+                            </select>
                         </td>
                     </tr>
                 </table>
@@ -62,3 +80,5 @@
         </form>
     </div>
 </body>
+
+</html>

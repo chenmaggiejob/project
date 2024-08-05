@@ -3,7 +3,7 @@
         <div class="backend-box mt-0">
             <div class="sticky-top" style="background-color: white;">
                 <div class="row">
-                    <div class="col-11 text-center">
+                    <div class="col text-center">
                         <h1>CLASSIC</h1>
                     </div>
                 </div>
@@ -28,7 +28,7 @@
                 ?>
                     <tr>
                         <td class="tvalign">
-                            <img class="img-fluid w-25 h-25" src="./image/classic/<?= $value['img'] ?>" alt="">
+                            <img class="img-fluid w-25 h-25" src="./image/classic/<?= $value['img'] ?>">
                         </td>
                         <td class="tvalign">
                             <input type="text" class="form-control" id="validationCustom03" required value="<?= $value['alt'] ?>" style="border: none;" class="text-center" readonly>

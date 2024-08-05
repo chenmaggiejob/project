@@ -1,6 +1,6 @@
     <div class="backend-box backend-title">
         <div class="row">
-            <div class="col-11 text-center">
+            <div class="col text-center">
                 <h1>Ring</h1>
             </div>
         </div>

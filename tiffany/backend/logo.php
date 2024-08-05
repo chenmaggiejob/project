@@ -28,7 +28,7 @@
                     ?>
                         <tr>
                             <td class="tvalign">
-                                <img class="img-fluid" src="./image/logo/<?= $value['img'] ?>" alt="">
+                                <img class="img-fluid" src="./image/logo/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
                             </td>
                             <td class="tvalign">
                                 <input type="text" class="form-control" id="validationCustom03" required value="<?= $value['alt'] ?>" style="border: none;" class="text-center" readonly>
