@@ -1,88 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Tiffany Backend</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
-</head>
-
-<body>
-    <div class="backend-box backend-title">
-        <div class="row">
-            <div class="col-11 text-center">
-                <h1>ADMIN</h1>
-            </div>
-
-            <div class="col-1 m-auto">
-                logout
-            </div>
+<div class="backend-box backend-title">
+    <div class="row">
+        <div class="col-11 text-center">
+            <h1>ADMIN</h1>
         </div>
     </div>
-    <div>
-        <form action="">
+</div>
+<div>
 
-            <div class="content-box backend-box mt-3">
 
-                <div class="d-grid">
-                    <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">
-                        <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
-                    </button>
-                </div>
+    <form action="">
+        <div class="content-box backend-box mt-3">
 
-                <table class="table table-bordered text-center mt-2">
+            <div class="d-grid">
+                <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_admin'">
+                    <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
+                </button>
+            </div>
+
+            <table class="table table-bordered text-center mt-2">
+                <tr>
+                    <th style="width: 20%;">Account</th>
+                    <th style="width: 20%;">Name</th>
+                    <th style="width: 20%;">Role</th>
+                    <th style="width: 15%;">Option</th>
+                </tr>
+                <?php
+                $Admin = new DB('tf_admin');
+                $data = $Admin->all();
+                // dd($data);
+                foreach ($data as $key => $value) {
+                ?>
                     <tr>
-                        <th style="width: 20%;">Account</th>
-                        <th style="width: 20%;">Password</th>
-                        <th style="width: 20%;">Name</th>
-                        <th style="width: 20%;">Role</th>
-                        <!-- <th style="width: 5%;">Show</th>
-                        <th style="width: 5%;">Delete</th> -->
-                        <th style="width: 5%;">Delete</th>
-                        <th style="width: 15%;">Option</th>
-                    </tr>
-                    <tr>
-
                         <td class="tvalign">
-                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <input type="text" class="form-control" id="validationCustom03" required readonly value="<?= $value['acc'] ?>">
                         </td>
                         <td class="tvalign">
-                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <input type="text" class="form-control" id="validationCustom03" required readonly value="<?= $value['name'] ?>">
                         </td>
                         <td class="tvalign">
-                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <input type="text" class="form-control" id="validationCustom03" required readonly value="<?= $value['role'] ?>">
                         </td>
-
-                        <td>
-                            <select class="form-select" aria-label="Default select example">
-                                <option class="text-center" value="1">Regular User</option>
-                                <option class="text-center" value="2">Administrator</option>
-                            </select>
-                        </td>
-
-                        <!-- <td class="tvalign">
-                            <input type="radio">
-                        </td> -->
-
                         <td class="tvalign">
-                            <input type="checkbox">
-                        </td>
-
-                        <td class="tvalign">
-                            <button class="btn btn-success" type="submit">
-                                <img src="../image/icon/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                            <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_admin&id=<?= $value['id'] ?>'">
+                                <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
                             </button>
-                            <button class="btn btn-secondary">
-                                <img src="../image/icon/restart_alt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                            <button class="btn btn-danger" type="button" onclick="del(<?= $value['id'] ?>)">
+                                <img src="../image/icon/delete_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
                             </button>
                         </td>
                     </tr>
-                </table>
-        </form>
-    </div>
-</body>
+                <?php
+                }
+                ?>
+            </table>
+    </form>
+</div>
 
-</html>
+<script>
+    function del(id) {
+        $.post("./api/del_admin.php", {
+            id
+        }, (res) => {
+            if (res == 1) {
+                alert("del ok");
+                location.reload()
+            }
+        })
+    }
+</script>
