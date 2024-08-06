@@ -20,7 +20,7 @@
     </div>
 
     <div>
-        <form action="./api/add_adimn.php" enctype="multipart/form-data" method="post">
+        <form action="./api/add_admin.php" enctype="multipart/form-data" method="post">
             <div class="content-box backend-box mt-3">
                 <div class="add-header"></div>
                 <table class="table table-bordered text-center mt-3">
