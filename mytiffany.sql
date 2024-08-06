@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2024-08-02 10:06:20
+-- 產生時間： 2024-08-06 09:01:19
 -- 伺服器版本： 10.4.32-MariaDB
 -- PHP 版本： 8.2.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `tf_admin` (
 
 INSERT INTO `tf_admin` (`id`, `acc`, `pwd`, `name`, `role`) VALUES
 (1, 'admin', '1234', 'SuperAdmin', 1),
-(2, 'user', '1234', 'User', 0);
+(2, 'user', '1234', 'User', 0),
+(5, 'tiffany', '1234', 'tiffany', 0);
 
 -- --------------------------------------------------------
 
@@ -115,6 +116,29 @@ INSERT INTO `tf_classic` (`id`, `img`, `alt`, `sh`) VALUES
 -- --------------------------------------------------------
 
 --
+-- 資料表結構 `tf_early_acccess`
+--
+
+CREATE TABLE `tf_early_acccess` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `ytlink` text NOT NULL,
+  `img` text NOT NULL,
+  `alt` text NOT NULL,
+  `img2` text NOT NULL,
+  `alt2` text NOT NULL,
+  `sh` int(1) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `tf_early_acccess`
+--
+
+INSERT INTO `tf_early_acccess` (`id`, `ytlink`, `img`, `alt`, `img2`, `alt2`, `sh`) VALUES
+(3, 'https://www.youtube.com/embed/x2Gck0ICbNY?si=QOFhTddDRLGyf29i', 'tiffany-lock-70158108_1070906_AV_1_M.webp', 'Tiffany', 'tiffany-lock-71855198_1052770_ED.webp', 'Tiffany & Co.', 1);
+
+-- --------------------------------------------------------
+
+--
 -- 資料表結構 `tf_logo`
 --
 
@@ -154,6 +178,53 @@ CREATE TABLE `tf_rings` (
 INSERT INTO `tf_rings` (`id`, `img`, `alt`, `title`, `des`, `sh`) VALUES
 (2, 'tiffany-forever-16574635_1045538_ED_M.webp', 'Tiffany & CO', 'Band Ring', 'Each Tiffany Forever ring celebrates the eternal bond of lifelong love and commitment. A half-circle of round brilliant diamonds defines this radiant platinum band. Make a striking statement by wearing this ring alone, or pair it with other Tiffany designs for a custom stack.', 1);
 
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `tf_service`
+--
+
+CREATE TABLE `tf_service` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `img` text NOT NULL,
+  `alt` text NOT NULL,
+  `title` text NOT NULL,
+  `des` text NOT NULL,
+  `sh` int(1) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `tf_service`
+--
+
+INSERT INTO `tf_service` (`id`, `img`, `alt`, `title`, `des`, `sh`) VALUES
+(1, 'gift.png', 'Tiffany & Co.', 'Tiffany At Your Service', 'There’s no question too small or request too big for our Tiffany client advisors. From choosing an engagement ring or gift to providing in-store or virtual appointments, we’re always at your service. ', 1);
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `tf_stories`
+--
+
+CREATE TABLE `tf_stories` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `img` text NOT NULL,
+  `alt` text NOT NULL,
+  `title` text NOT NULL,
+  `des` text NOT NULL,
+  `btn_name` text NOT NULL,
+  `sh` int(1) UNSIGNED NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `tf_stories`
+--
+
+INSERT INTO `tf_stories` (`id`, `img`, `alt`, `title`, `des`, `btn_name`, `sh`) VALUES
+(3, '2024_APR_BB_HP_WhatIsNew_Desktop.webp', 'Tiffany & Co.', 'Our Newest High Jewelry Collection', 'Fantastical. Poetic. Ethereal. Discover Blue Book 2024: Tiffany Céleste.', 'Explore the Collection', 1),
+(4, '2024-NCA-HP-Stories.webp', 'Tiffany & Co.', 'Tiffany Atrium & Nina Chanel Abney', 'Introducing the next chapter of Tiffany Atrium’s Artist Collaboration Series with multidis…', 'Learn More', 1),
+(5, '2024-TITAN-HP-Stories-1.webp', 'Tiffany & Co.', 'Tiffany Titan by Pharrell Williams', 'Pharrell Williams’ first jewelry collection for the House has arrived.', 'Shop Now', 1);
+
 --
 -- 已傾印資料表的索引
 --
@@ -183,6 +254,12 @@ ALTER TABLE `tf_classic`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `tf_early_acccess`
+--
+ALTER TABLE `tf_early_acccess`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 資料表索引 `tf_logo`
 --
 ALTER TABLE `tf_logo`
@@ -195,6 +272,18 @@ ALTER TABLE `tf_rings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- 資料表索引 `tf_service`
+--
+ALTER TABLE `tf_service`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- 資料表索引 `tf_stories`
+--
+ALTER TABLE `tf_stories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- 在傾印的資料表使用自動遞增(AUTO_INCREMENT)
 --
 
@@ -202,13 +291,13 @@ ALTER TABLE `tf_rings`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `tf_admin`
 --
 ALTER TABLE `tf_admin`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `tf_banner`
 --
 ALTER TABLE `tf_banner`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `tf_carousels`
@@ -223,6 +312,12 @@ ALTER TABLE `tf_classic`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `tf_early_acccess`
+--
+ALTER TABLE `tf_early_acccess`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- 使用資料表自動遞增(AUTO_INCREMENT) `tf_logo`
 --
 ALTER TABLE `tf_logo`
@@ -233,6 +328,18 @@ ALTER TABLE `tf_logo`
 --
 ALTER TABLE `tf_rings`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `tf_service`
+--
+ALTER TABLE `tf_service`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- 使用資料表自動遞增(AUTO_INCREMENT) `tf_stories`
+--
+ALTER TABLE `tf_stories`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
