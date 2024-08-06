@@ -28,17 +28,25 @@ include_once "../api/base.php";
         <!-- logo end-->
 
         <div class="mt-5">
-            <form action="../api/login.php" method="post" class="was-validated">
+            <form action="../api/reg.php" method="post" class="was-validated">
                 <div class="mb-3 mt-3">
                     <label for="acc" class="form-label">Account:</label>
                     <input type="text" class="form-control" id="acc" placeholder="Enter Account" name="acc" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Account" name="name" required>
                 </div>
                 <div class="mb-3">
                     <label for="pwd" class="form-label">Password:</label>
                     <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" required>
                 </div>
+                <div class="mb-3">
+                    <label for="pwd" class="form-label">Check Password:</label>
+                    <input type="password" class="form-control" id="chkpwd" placeholder="Enter Password" name="chkpwd" required>
+                </div>
                 <div class="d-grid mt-5">
-                    <button type="submit" class="btn" style="color:white; border: 0px;background-color: rgb(129, 216, 208);">Login</button>
+                    <button type="submit" class="btn" style="color:white; border: 0px;background-color: rgb(129, 216, 208);">Register</button>
                     <button type="reset" class="btn  btn-secondary mt-3">Reset</button>
                 </div>
             </form>

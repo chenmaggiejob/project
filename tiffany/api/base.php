@@ -51,6 +51,7 @@ class DB
         if (isset($arg[1])) {
             $sql .= $arg[0];
         }
+        // echo $sql;
         return $this->pdo->query($sql)->fetchColumn();
     }
 

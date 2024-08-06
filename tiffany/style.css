@@ -12,6 +12,7 @@
 .content-header {
     height: 15vh;
     /* background-color: black; */
+
 }
 
 .logo {
@@ -47,8 +48,9 @@
     align-items: center;
 }
 
-.focus {
-    background-color: lightsalmon;
+.lock {
+    background-color: rgb(250, 250, 250);
+    /* background-color: lightgoldenrodyellow; */
 }
 
 iframe {
@@ -62,7 +64,7 @@ iframe {
 }
 
 .contactus {
-    background-color: lightslategray;
+    background-color: rgb(250, 250, 250);
 }
 
 /* admin css */
@@ -187,7 +189,7 @@ td.tvalign {
 }
 
 .backend-main {
-    font-size: 72px;
+    font-size: 50px;
     font-weight: bold;
     color: rgb(129, 216, 208);
     text-align: center;
@@ -199,4 +201,23 @@ td.tvalign {
 .tfbtn {
     border: 0px;
     background-color: rgb(129, 216, 208)
+}
+
+
+.navlink3 {
+    /* font-size: 16px; */
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    /* 移除預設底線 */
+    color: black;
+    /* 設定文字顏色 */
+    padding: 5px 0;
+    /* 給連結一些內邊距 */
+    margin-right: 5%;
+    border: 0px;
+}
+
+.navlink3:hover {
+    color: blue;
 }

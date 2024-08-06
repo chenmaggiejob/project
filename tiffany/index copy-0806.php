@@ -35,63 +35,44 @@ include_once "./api/base.php";
                 <!-- Links -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#classic">Classic</a>
+                        <a class="nav-link" href="#">Link 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#ring">Ring</a>
+                        <a class="nav-link" href="#">Link 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#jewelry">Jewelry</a>
+                        <a class="nav-link" href="#">Link 3</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#stories">Stories</a>
-                    </li>
+                    <?php
+                    if (isset($_SESSION['role'])) {
+                        if ($_SESSION['role'] == 1) {
+                    ?>
+                            <li class="nav-item ms-auto">
+                                <a class="nav-link" href="./admin.php">CMS</a>
+                            </li>
+                            <li class="nav-item ms-auto">
+                                <a class="nav-link" href="./api/logout.php">Logout</a>
+                            </li>
+                        <?php
+                        } else {
+                        ?>
+                            <li class="nav-item ms-auto">
+                                <a class="nav-link" href="./api/logout.php">Logout</a>
+                            </li>
+                        <?php
+                        }
+                        ?>
+                    <?php
+                    } else {
+                    ?>
+                        <li class="nav-item ms-auto">
+                            <a class="nav-link" href="./frontend/login.php">Login</a>
+                        </li>
+                    <?php
+                    }
+                    ?>
                 </ul>
             </div>
-
-            <?php
-            if (isset($_SESSION['role'])) {
-                if ($_SESSION['role'] == 1) {
-            ?>
-                    <!-- admin -->
-                    <div class="dropdown navlink3">
-                        <a class="btn navlink3 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <?= $_SESSION['login'] ?>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./admin.php">CMS</a></li>
-                            <li><a class="dropdown-item" href="./api/logout.php">Log Out</a></li>
-                        </ul>
-                    </div>
-                <?php
-                } else {
-                ?>
-                    <!-- user -->
-                    <div class="dropdown navlink3">
-                        <a class="btn dropdown-toggle navlink3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <?= $_SESSION['login'] ?>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./api/logout.php">Log Out</a></li>
-                        </ul>
-                    </div>
-                <?php
-                }
-            } else {
-                ?>
-                <!-- 判斷是否登入 -->
-                <div class="dropdown navlink3">
-                    <a class="btn dropdown-toggle navlink3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Menu
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="./frontend/login.php">Log In</a></li>
-                        <li><a class="dropdown-item" href="./frontend/reg.php">Register</a></li>
-                    </ul>
-                </div>
-            <?php
-            }
-            ?>
         </nav>
         <!-- nav end-->
     </div>
@@ -116,8 +97,8 @@ include_once "./api/base.php";
     <!-- content-banner end -->
 
     <!-- content-classic -->
-    <div id="classic"></div>
     <div class="classic container-box mt-3">
+
         <?php
         $Classic = new DB('tf_classic');
         $data = $Classic->all(['sh' => 1]);
@@ -135,7 +116,6 @@ include_once "./api/base.php";
     <!-- content-classic end -->
 
     <!-- content-Rings -->
-    <div id="ring"></div>
     <div class="container-fluid rings container-box mt-3">
         <?php
         $Rings = new DB('tf_rings');
@@ -190,7 +170,6 @@ include_once "./api/base.php";
     <!-- content-Rings end -->
 
     <!-- content-Early Access -->
-    <div id="jewelry"></div>
     <div class="container-box mt-3">
         <div class="row lock">
             <h2 class="text-center mt-5 mb-5" style="font-weight: bold;">— Tiffany Lock x ROSÉ —</h2>
@@ -212,7 +191,6 @@ include_once "./api/base.php";
     <!-- content-Early Access end -->
 
     <!-- content-stroies -->
-    <div id="stories"></div>
     <div class="container-box mt-3">
         <div class="row w-100 text-center">
             <h2 class="text-center mt-5">Stories</h2>

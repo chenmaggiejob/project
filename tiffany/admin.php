@@ -17,10 +17,9 @@ include_once "./api/base.php";
 </head>
 
 <body>
-    <div class="container-box">
-
+    <div class="container-box mt-5">
         <!-- container-header sticky -->
-        <div class="logo mt-1">
+        <div class="logo">
             <!-- logo -->
             <?php
             $Logo = new DB('tf_logo');
