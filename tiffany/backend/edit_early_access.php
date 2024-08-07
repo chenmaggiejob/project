@@ -55,7 +55,7 @@ $value = $Early_access->find($_GET['id']);
                             <option value="1" <?= $value['sh'] == 1 ? 'selected' : '' ?>>show</option>
                             <option value="0" <?= $value['sh'] == 0 ? 'selected' : '' ?>>hide</option>
                         </select>
-                        <input type="hidden" name="id" value="<?= $value['id'] ?>;">
+                        <input type="hidden" name="id" value="<?= $value['id'] ?>">
                     </td>
                     <td class="tvalign">
                         <button class="btn btn-success" type="submit">
