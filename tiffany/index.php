@@ -196,16 +196,16 @@ include_once "./api/base.php";
             <h2 class="text-center mt-5 mb-5" style="font-weight: bold;">— Tiffany Lock x ROSÉ —</h2>
             <div class="col  mb-3">
                 <?php
-                $Early_acccess = new DB('tf_early_acccess');
-                $value = $Early_acccess->find(['sh' => 1]);
+                $Early_access = new DB('tf_early_access');
+                $value = $Early_access->find(['sh' => 1]);
                 ?>
                 <iframe src="<?= $value['ytlink'] ?>" frameborder="0"></iframe>
             </div>
             <div class="col text-center">
-                <img style="width:78%" src="./image/early_acccess/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
+                <img style="width:78%" src="./image/early_access/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
             </div>
             <div class="col text-center ">
-                <img style="width:78%" src="./image/early_acccess/<?= $value['img2'] ?>" alt="<?= $value['alt2'] ?>">
+                <img style="width:78%" src="./image/early_access/<?= $value['img2'] ?>" alt="<?= $value['alt2'] ?>">
             </div>
         </div>
     </div>

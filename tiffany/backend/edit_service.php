@@ -15,7 +15,7 @@ $value = $Service->find($_GET['id']);
         <div class="backend-box mt-3">
             <div class="d-grid">
                 <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_service'">
-                    <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
+                    <img src="../image/icon/add.png" alt="" style="width: 32px;height: 32px;">
                 </button>
             </div>
             <table class="table table-bordered text-center mt-2">
@@ -60,7 +60,7 @@ $value = $Service->find($_GET['id']);
 
                     <td class="tvalign">
                         <button class="btn btn-success" type="submit">
-                            <img src="../image/icon/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
+                            <img src="../image/icon/save.png" alt="" style="width: 32px; height: 32px;">
                         </button>
 
                     </td>

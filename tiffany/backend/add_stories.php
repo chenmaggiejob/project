@@ -51,19 +51,19 @@
                 <div class="content-box beckend-box mt-5">
                     <div class="d-grid mt-2">
                         <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_stories'">
-                            <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
+                            <img src="../image/icon/add.png" alt="" style="width: 32px;height: 32px;">
                         </button>
                     </div>
 
                     <div class="d-grid col mt-2">
                         <button class="btn btn-success" type="submit">
-                            <img src="../image/icon/save_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                            <img src="../image/icon/save.png" alt="">
                         </button>
                     </div>
 
                     <div class="d-grid col mt-2">
                         <button class="btn btn-secondary">
-                            <img src="../image/icon/restart_alt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="">
+                            <img src="../image/icon/restart.png" alt="">
                         </button>
                     </div>
                 </div>

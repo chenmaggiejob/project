@@ -9,7 +9,7 @@
                 </div>
                 <div class="d-grid">
                     <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_classic'">
-                        <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;">
+                        <img src="../image/icon/add.png" alt="" style="width: 32px;height: 32px;">
                     </button>
                 </div>
             </div>
@@ -39,10 +39,10 @@
                         </td>
                         <td class="tvalign">
                             <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_classic&id=<?= $value['id'] ?>'">
-                                <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
+                                <img src="../image/icon/edit.png" alt="" style="width: 32px; height: 32px;">
                             </button>
                             <button class="btn btn-danger" type="button" onclick="del(<?= $value['id'] ?>)">
-                                <img src="../image/icon/delete_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
+                                <img src="../image/icon/delete.png" alt="" style="width: 32px; height: 32px;">
                             </button>
                         </td>
                     </tr>

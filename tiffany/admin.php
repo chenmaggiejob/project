@@ -60,7 +60,7 @@ include_once "./api/base.php";
                             <a class="navlink" href="?do=carousel">carousel</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
-                            <a class="navlink" href="?do=early_acccess">Early Acccess</a>
+                            <a class="navlink" href="?do=early_access">Early Access</a>
                         </div>
                         <div class="" style="margin-left: 15px;">
                             <a class="navlink" href="?do=stories">Stories Card</a>

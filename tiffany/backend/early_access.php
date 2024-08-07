@@ -1,7 +1,7 @@
     <div class="backend-box backend-title">
         <div class="row">
             <div class="col text-center">
-                <h1>EARLY_ACCCESS</h1>
+                <h1>EARLY_ACCESS</h1>
             </div>
         </div>
     </div>
@@ -13,7 +13,7 @@
 
                 <div class="d-grid">
                     <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">
-                        <img src="../image/icon/add_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px;height: 32px;" onclick="location.href='?do=add_early_acccess'">
+                        <img src="../image/icon/add.png" alt="" style="width: 32px;height: 32px;" onclick="location.href='?do=add_early_access'">
                     </button>
                 </div>
 
@@ -29,8 +29,8 @@
                         <a href=""></a>
                     </tr>
                     <?php
-                    $Early_acccess = new DB('tf_early_acccess');
-                    $data = $Early_acccess->all();
+                    $Early_access = new DB('tf_early_access');
+                    $data = $Early_access->all();
                     foreach ($data as $key => $value) {
                     ?>
                         <tr>
@@ -39,7 +39,7 @@
                             </td>
 
                             <td class="tvalign">
-                                <img class="img-fluid w-25 h-25" src="../image/early_acccess/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
+                                <img class="img-fluid w-25 h-25" src="../image/early_access/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
                             </td>
 
                             <td class="tvalign">
@@ -47,7 +47,7 @@
                             </td>
 
                             <td class="tvalign">
-                                <img class="img-fluid w-25 h-25" src="../image/early_acccess/<?= $value['img2'] ?>" alt="<?= $value['alt'] ?>">
+                                <img class="img-fluid w-25 h-25" src="../image/early_access/<?= $value['img2'] ?>" alt="<?= $value['alt'] ?>">
                             </td>
 
                             <td class="tvalign">
@@ -61,10 +61,10 @@
 
                             <td class="tvalign">
                                 <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_early_acccess&id=<?= $value['id'] ?>'">
-                                    <img src="../image/icon/edit_square_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
+                                    <img src="../image/icon/edit.png" alt="" style="width: 32px; height: 32px;">
                                 </button>
                                 <button class="btn btn-danger" type="button" onclick="del(<?= $value['id'] ?>)">
-                                    <img src="../image/icon/delete_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" style="width: 32px; height: 32px;">
+                                    <img src="../image/icon/delete.png" alt="" style="width: 32px; height: 32px;">
                                 </button>
                             </td>
                         </tr>
