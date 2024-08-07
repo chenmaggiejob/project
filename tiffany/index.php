@@ -194,17 +194,17 @@ include_once "./api/base.php";
     <div class="mt-3">
         <div class="row container-box lock">
             <h2 class="text-center mt-5 mb-5" style="font-weight: bold;">— Tiffany Lock x ROSÉ —</h2>
-            <div class="col  mb-3">
+            <div class="col-12 col-lg-4 mb-3">
                 <?php
                 $Early_access = new DB('tf_early_access');
                 $value = $Early_access->find(['sh' => 1]);
                 ?>
                 <iframe src="<?= $value['ytlink'] ?>" frameborder="0"></iframe>
             </div>
-            <div class="col text-center">
+            <div class="col-12 col-lg-4 text-center">
                 <img style="width:78%" src="./image/early_access/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
             </div>
-            <div class="col text-center ">
+            <div class="col-12 col-lg-4 text-center ">
                 <img style="width:78%" src="./image/early_access/<?= $value['img2'] ?>" alt="<?= $value['alt2'] ?>">
             </div>
         </div>
