@@ -31,7 +31,7 @@ $value = $Early_access->find($_GET['id']);
                         <input type="text" class="form-control" id="validationCustom03" name="ytlink" required value="<?= $value['ytlink'] ?>">
                     </td>
                     <td class="tvalign">
-                        <img class="img-fluid" style="width: 25%; height: 25%;" src="../image/early_access/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
+                        <img class="img-fluid" style="width: 25%; height: 25%;" src="./image/early_access/<?= $value['img'] ?>" alt="<?= $value['alt'] ?>">
                     </td>
                     <td class="tvalign">
                         <input class="form-control" type="file" id="formFile" name="img">
@@ -40,7 +40,7 @@ $value = $Early_access->find($_GET['id']);
                         <input type="text" class="form-control" id="validationCustom03" name="alt" required value=<?= $value['alt'] ?>>
                     </td>
                     <td class="tvalign">
-                        <img class="img-fluid" style="width: 25%; height: 25%;" src="../image/early_access/<?= $value['img2'] ?>" alt="<?= $value['alt'] ?>">
+                        <img class="img-fluid" style="width: 25%; height: 25%;" src="./image/early_access/<?= $value['img2'] ?>" alt="<?= $value['alt'] ?>">
                     </td>
                     <td class="tvalign">
                         <input class="form-control" type="file" id="formFile" name="img">
@@ -62,19 +62,19 @@ $value = $Early_access->find($_GET['id']);
             <div class="content-box beckend-box mt-5">
                 <div class="d-grid mt-2">
                     <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">
-                        <img src="../image/icon/add.png" alt="" style="width: 32px;height: 32px;">
+                        <img src="./image/icon/add.png" alt="" style="width: 32px;height: 32px;">
                     </button>
                 </div>
 
                 <div class="d-grid col mt-2">
                     <button class="btn btn-success" type="submit">
-                        <img src="../image/icon/save.png" alt="">
+                        <img src="./image/icon/save.png" alt="">
                     </button>
                 </div>
 
                 <div class="d-grid col mt-2">
                     <button class="btn btn-secondary">
-                        <img src="../image/icon/restart.png" alt="">
+                        <img src="./image/icon/restart.png" alt="">
                     </button>
                 </div>
             </div>

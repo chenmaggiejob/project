@@ -23,4 +23,10 @@ if ($_POST['pwd'] == $_POST['chkpwd']) {
             location.href='../frontend/reg.php'
         </script>";
     }
+} else {
+    echo "
+        <script>
+            alert('Please check your password')
+            location.href='../frontend/reg.php'
+        </script>";
 }

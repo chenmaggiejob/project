@@ -16,7 +16,7 @@ include_once "./api/base.php";
 
 <body>
     <!-- container-header sticky -->
-    <div class="container-box content-header sticky-top" style="background-color: rgba(255,255,255,0.7); backdrop-filter: blur(0px);">
+    <div class="container-box content-header sticky-top mt-3" style="background-color: rgba(255,255,255,0.7); backdrop-filter: blur(0px);">
         <!-- logo -->
         <div class="logo">
             <?php
@@ -30,7 +30,7 @@ include_once "./api/base.php";
         <!-- logo end-->
 
         <!-- nav -->
-        <nav class="navbar navbar-expand-sm nav">
+        <nav class="navbar navbar-expand-sm nav mt-3">
             <div class="container-fluid">
                 <!-- Links -->
                 <ul class="navbar-nav">
@@ -191,8 +191,8 @@ include_once "./api/base.php";
 
     <!-- content-Early Access -->
     <div id="jewelry"></div>
-    <div class="container-box mt-3">
-        <div class="row lock">
+    <div class="mt-3">
+        <div class="row container-box lock">
             <h2 class="text-center mt-5 mb-5" style="font-weight: bold;">— Tiffany Lock x ROSÉ —</h2>
             <div class="col  mb-3">
                 <?php

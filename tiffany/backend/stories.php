@@ -11,7 +11,7 @@
             <div class="content-box backend-box mt-3">
                 <div class="d-grid">
                     <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);" onclick="location.href='?do=add_stories'">
-                        <img src="../image/icon/add.png" alt="" style="width: 32px;height: 32px;">
+                        <img src="./image/icon/add.png" alt="" style="width: 32px;height: 32px;">
                     </button>
                 </div>
                 <table class="table table-bordered text-center mt-2">
@@ -57,10 +57,10 @@
 
                             <td class="tvalign">
                                 <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_stories&id=<?= $value['id'] ?>'">
-                                    <img src="../image/icon/edit.png" alt="" style="width: 32px; height: 32px;">
+                                    <img src="./image/icon/edit.png" alt="" style="width: 32px; height: 32px;">
                                 </button>
                                 <button class="btn btn-danger" type="button" onclick="del(<?= $value['id'] ?>)">
-                                    <img src="../image/icon/delete.png" alt="" style="width: 32px; height: 32px;">
+                                    <img src="./image/icon/delete.png" alt="" style="width: 32px; height: 32px;">
                                 </button>
                             </td>
                         </tr>
