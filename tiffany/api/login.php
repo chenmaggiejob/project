@@ -5,6 +5,7 @@ $chk = $Admin->count(['acc' => $_POST['acc'], 'pwd' => $_POST['pwd']]);
 
 if ($chk) {
     $tmp = $Admin->find($_POST);
+    $_SESSION['id'] = $tmp['id'];
     $_SESSION['login'] = $tmp['name'];
     $_SESSION['role'] = $tmp['role'];
     if ($_SESSION['role'] == 1) {

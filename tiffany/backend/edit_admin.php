@@ -38,7 +38,7 @@ $value = $Admin->find($_GET['id']);
                         <input type="text" class="form-control" id="validationCustom03" name="name" required value="<?= $value['name'] ?>">
                     </td>
                     <td class="tvalign">
-                        <input type="text" class="form-control" id="validationCustom03" name="name" required value="<?= $value['role'] ?>">
+                        <input type="text" class="form-control" id="validationCustom03" name="role" required value="<?= $value['role'] ?>">
                     </td>
                     <td class="tvalign">
                         <button class="btn btn-success" type="submit">
