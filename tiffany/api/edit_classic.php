@@ -2,7 +2,7 @@
 include_once "base.php";
 $Classic = new DB('tf_classic');
 if ($_POST['sh'] == 1) {
-$Classic->q("UPDATE tf_logo SET sh = '0' WHERE id != '{$_POST['id']}'");
+$Classic->q("UPDATE tf_classic SET sh = '0' WHERE id != '{$_POST['id']}'");
 }
 // dd($_POST);
 // dd($_FILES);
