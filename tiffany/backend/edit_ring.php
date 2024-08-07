@@ -50,8 +50,8 @@ $value = $Rings->find($_GET['id']);
 
                     <td class="tvalign">
                         <select name="sh" id="" class="form-select">
-                            <option value="0">hide</option>
-                            <option value="1">show</option>
+                            <option value="1" <?= $value['sh'] == 1 ? 'selected' : '' ?>>show</option>
+                            <option value="0" <?= $value['sh'] == 0 ? 'selected' : '' ?>>hide</option>
                         </select>
                         <input type="hidden" name="id" value="<?= $value['id'] ?>;">
                     </td>

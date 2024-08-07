@@ -17,6 +17,11 @@ include_once "./api/base.php";
 </head>
 
 <body>
+    <?php
+    if ($_SESSION['role'] != 1) {
+        to("./index.php");
+    }
+    ?>
     <div class="container-box mt-5">
         <!-- container-header sticky -->
         <div class="logo">

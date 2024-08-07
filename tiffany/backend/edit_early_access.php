@@ -12,7 +12,7 @@ $value = $Early_access->find($_GET['id']);
 </div>
 
 <div>
-    <form action="./api/edit_early_acccess.php" method="post" enctype="multipart/form-data">
+    <form action="./api/edit_early_access.php" method="post" enctype="multipart/form-data">
         <div class="content-box backend-box mt-3">
             <div class="add-header"></div>
             <table class="table table-bordered text-center mt-3">
@@ -20,11 +20,12 @@ $value = $Early_access->find($_GET['id']);
                     <th style="width: 10%;">Youtube Link</th>
                     <th style="width: 10%;">Itme1 Image</th>
                     <th style="width: 10%;">Change Itme1 Image</th>
-                    <th style="width: 10%;">Alt1</th>
+                    <th style="width: 5%;">Alt1</th>
                     <th style="width: 10%;">Itme2 Image</th>
                     <th style="width: 10%;">Change Itme2 Image</th>
-                    <th style="width: 10%;">Alt2</th>
-                    <th style="width: 5%;">Show</th>
+                    <th style="width: 5%;">Alt2</th>
+                    <th style="width: 10%;">Show</th>
+                    <th style="width: 5%;">Option</th>
                 </tr>
                 <tr>
                     <td class="tvalign">
@@ -51,33 +52,18 @@ $value = $Early_access->find($_GET['id']);
 
                     <td class="tvalign">
                         <select name="sh" id="" class="form-select">
-                            <option value="0">hide</option>
-                            <option value="1">show</option>
+                            <option value="1" <?= $value['sh'] == 1 ? 'selected' : '' ?>>show</option>
+                            <option value="0" <?= $value['sh'] == 0 ? 'selected' : '' ?>>hide</option>
                         </select>
                         <input type="hidden" name="id" value="<?= $value['id'] ?>;">
                     </td>
+                    <td class="tvalign">
+                        <button class="btn btn-success" type="submit">
+                            <img src="./image/icon/save.png" alt="" style="width: 32px; height: 32px;">
+                        </button>
+                    </td>
                 </tr>
             </table>
-
-            <div class="content-box beckend-box mt-5">
-                <div class="d-grid mt-2">
-                    <button type="button" class="btn" style="border: 0px;background-color: rgb(129, 216, 208);">
-                        <img src="./image/icon/add.png" alt="" style="width: 32px;height: 32px;">
-                    </button>
-                </div>
-
-                <div class="d-grid col mt-2">
-                    <button class="btn btn-success" type="submit">
-                        <img src="./image/icon/save.png" alt="">
-                    </button>
-                </div>
-
-                <div class="d-grid col mt-2">
-                    <button class="btn btn-secondary">
-                        <img src="./image/icon/restart.png" alt="">
-                    </button>
-                </div>
-            </div>
         </div>
     </form>
 </div>

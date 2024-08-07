@@ -3,7 +3,7 @@ include_once "base.php";
 // dd($_POST);
 $Early_access = new DB('tf_early_access');
 if ($_POST['sh'] == 1) {
-    $Early_acccss->q("UPDATE tf_early_access SET sh = '0' WHERE id != '{$_POST['id']}'");
+    $Early_access->q("UPDATE tf_early_access SET sh = '0' WHERE id != '{$_POST['id']}'");
 }
 if (!empty($_FILES['img']['tmp_name']) || !empty($_FILES['img2']['tmp_name'])) {
     if (!empty($_FILES['img']['tmp_name'])) {

@@ -60,7 +60,7 @@
                             </td>
 
                             <td class="tvalign">
-                                <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_early_acccess&id=<?= $value['id'] ?>'">
+                                <button class="btn btn-primary" type="button" onclick="location.href='?do=edit_early_access&id=<?= $value['id'] ?>'">
                                     <img src="./image/icon/edit.png" alt="" style="width: 32px; height: 32px;">
                                 </button>
                                 <button class="btn btn-danger" type="button" onclick="del(<?= $value['id'] ?>)">
