@@ -33,6 +33,17 @@ include_once "../api/base.php";
                 <p style="color:rgb(167, 167, 167);">
                     Save time during checkout, view your shopping bag and saved items from any device and access your order history.
                 </p>
+                <p style="font-weight:bold">Have a Tiffany account?&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span><a class="navlink" href="./login.php">Log In ></a></span>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <div class="col">
+
+                </div>
             </div>
             <form action="../api/reg.php" method="post" class="was-validated">
                 <div class="mb-3 mt-3">
