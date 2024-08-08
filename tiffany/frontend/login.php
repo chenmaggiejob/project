@@ -45,7 +45,7 @@ include_once "../api/base.php";
                     <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd" required>
                 </div>
                 <div class="d-grid mt-5">
-                    <button type="submit" class="btn" style="color:white; border: 0px;background-color: rgb(129, 216, 208);">Login</button>
+                    <button type="submit" class="btn" style="color:white; border: 0px;background-color: rgb(129, 216, 208);">Log In</button>
                     <button type="reset" class="btn  btn-secondary mt-3">Reset</button>
                 </div>
             </form>
