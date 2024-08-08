@@ -1,6 +1,7 @@
 <?php
 include_once "../api/base.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,23 +29,24 @@ include_once "../api/base.php";
         <!-- logo end-->
 
         <div class="mt-5">
+            <?php
+            $Admin = new DB('tf_admin');
+            $value = $Admin->find(['acc' => $_SESSION['acc']])
+            ?>
             <div class="text-center">
-                <h2 style="font-weight: bold;">Create an Account</h2>
+                <h2 style="font-weight: bold;">Reset Password</h2>
                 <p style="color:rgb(167, 167, 167);">
-                    Save time during checkout, view your shopping bag and saved items from any device and access your order history.
+                    Please enter your new password.
                 </p>
                 <p style="font-weight:bold">Have a Tiffany account?&nbsp;&nbsp;&nbsp;&nbsp;
                     <span><a class="navlink" href="./login.php">Log In ></a></span>
                 </p>
             </div>
-            <form action="../api/reg.php" method="post" class="was-validated">
+            <form action="../api/reset_pwd.php" method="post" class="was-validated">
+                <input type="hidden" name="id" value="<?= $value['id'] ?>">
                 <div class="mb-3 mt-3">
                     <label for="acc" class="form-label">Account:</label>
-                    <input type="text" class="form-control" id="acc" placeholder="Enter Account" name="acc" required>
-                </div>
-                <div class="mb-3 mt-3">
-                    <label for="name" class="form-label">Name:</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter Account" name="name" required>
+                    <input type="text" class="form-control" id="validationCustom03" name="acc" required value="<?= $value['acc'] ?>">
                 </div>
                 <div class="mb-3">
                     <label for="pwd" class="form-label">Password:</label>
@@ -55,7 +57,7 @@ include_once "../api/base.php";
                     <input type="password" class="form-control" id="chkpwd" placeholder="Enter Password" name="chkpwd" required>
                 </div>
                 <div class="d-grid mt-5">
-                    <button type="submit" class="btn" style="color:white; border: 0px;background-color: rgb(129, 216, 208);">Register</button>
+                    <button type="submit" class="btn" style="color:white; border: 0px;background-color: rgb(129, 216, 208);">Submit</button>
                     <button type="reset" class="btn  btn-secondary mt-3">Reset</button>
                 </div>
             </form>

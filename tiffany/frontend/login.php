@@ -28,6 +28,13 @@ include_once "../api/base.php";
         <!-- logo end-->
 
         <div class="mt-5">
+            <div class="text-center">
+                <h2 style="font-weight: bold;">Log In</h2>
+                <p style="color:rgb(167, 167, 167);">
+                    Please log in to your Tiffany Account.
+                </p>
+
+            </div>
             <form action="../api/login.php" method="post" class="was-validated">
                 <div class="mb-3 mt-3">
                     <label for="acc" class="form-label">Account:</label>
@@ -42,6 +49,11 @@ include_once "../api/base.php";
                     <button type="reset" class="btn  btn-secondary mt-3">Reset</button>
                 </div>
             </form>
+            <div class="mt-3">
+                <p style="font-weight:bold">
+                    <span><a class="navlink" href="./chk_acc.php">Forgot your password? ></a></span>
+                </p>
+            </div>
         </div>
     </div>
 </body>
