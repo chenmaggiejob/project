@@ -16,7 +16,7 @@ include_once "../api/base.php";
 <body>
     <div class="backend-box mt-5 w-50">
         <!-- logo -->
-        <div class="logo backend-main" style="margin-top: 15%;margin-bottom: 10%;">
+        <div class="logo backend-main" style="margin-top: 15%;margin-bottom: 5%;">
             <?php
             $Logo = new DB('tf_logo');
             $data = $Logo->find(['sh' => 1]);
@@ -28,6 +28,12 @@ include_once "../api/base.php";
         <!-- logo end-->
 
         <div class="mt-5">
+            <div class="text-center">
+                <h2 style="font-weight: bold;">Create an Account</h2>
+                <p style="color:rgb(167, 167, 167);">
+                    Save time during checkout, view your shopping bag and saved items from any device and access your order history.
+                </p>
+            </div>
             <form action="../api/reg.php" method="post" class="was-validated">
                 <div class="mb-3 mt-3">
                     <label for="acc" class="form-label">Account:</label>
